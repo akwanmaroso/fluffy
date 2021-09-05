@@ -1,0 +1,30 @@
+[package]
+name = "auth-service"
+version = "0.1.0"
+authors = ["akwanmaroso"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+config = "0.10"
+dotenv = "0.15"
+actix-web = "2"
+actix-rt = "1"
+actix-identity = "0.2"
+actix-web-httpauth = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+futures = { version = "0.3", features = ["compat"] }
+argonautica = { version = "0.2", features = ["simd"] }
+sqlx = { version = "0.3", default-features = false, features = [ "runtime-tokio", "macros", "postgres", "uuid", "chrono" ] }
+color-eyre = "0.3"
+eyre = "0.4"
+tracing = "0.1"
+tracing-futures = "0.2"
+tracing-log = { version = "0.1", features = ["env_logger"] }
+tracing-subscriber = "0.2"
+uuid = { version = "0.8", features = ["serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+validator = "0.10"
+validator_derive = "0.10"
+jsonwebtoken = "7.1"
